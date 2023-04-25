@@ -14,8 +14,8 @@ struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2)
     while(list1!=NULL&&list2!=NULL)
     {
  
-		//实际没有再创建新节点，使用的是本来的节点；
-		struct ListNode**pnew=(list1->val<=list2->val?(&list1):(&list2));
+	//实际没有再创建新节点，使用的是本来的节点；
+	struct ListNode**pnew=(list1->val<=list2->val?(&list1):(&list2));
         ptail->next=*pnew;
         ptail=*pnew;
         *pnew=(*pnew)->next;
